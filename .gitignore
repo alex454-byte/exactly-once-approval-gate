@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+config.json
+config.local.json
+*.log
+node_modules/
+coverage/
+.agent-state/

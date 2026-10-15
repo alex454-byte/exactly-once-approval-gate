@@ -1,0 +1,8 @@
+node_modules/
+config.local.json
+functions/.env
+firebase-debug*.log
+*.log
+coverage/
+public/config.js
+functions/lib/

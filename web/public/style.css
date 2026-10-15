@@ -1,0 +1,55 @@
+:root {
+  color-scheme: dark;
+  --bg: #000;
+  --surface: #111;
+  --text: #eee;
+  --muted: #aaa;
+  --border: #383838;
+  --yes: #94E522;
+  --no: #F91EAD;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
+}
+* { box-sizing: border-box; }
+body { margin: 0; overflow-wrap: anywhere; }
+.container { width: 100%; max-width: 640px; margin: 0 auto; padding: 0 16px 32px; }
+header { border-bottom: 1px solid var(--border); padding-bottom: 16px; }
+nav, #auth { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+nav { justify-content: space-between; padding: 12px 0; }
+a { color: var(--yes); display: inline-flex; align-items: center; min-height: 48px; max-width: 100%; text-underline-offset: 4px; }
+button { min-height: 48px; max-width: 100%; padding: 10px 16px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; cursor: pointer; }
+button:disabled { opacity: .55; cursor: wait; }
+button:focus-visible, a:focus-visible { outline: 3px solid var(--yes); outline-offset: 3px; }
+.account { flex: 1 1 180px; min-width: 0; color: var(--muted); }
+#message:empty { display: none; }
+#message, .notice { padding: 12px; border: 1px solid var(--yes); border-radius: 10px; }
+main { padding-top: 20px; }
+h1 { font-size: 1.65rem; line-height: 1.2; margin: 0 0 16px; }
+h2 { font-size: 1.1rem; margin-top: 28px; }
+p { margin: 12px 0; }
+.card { background: var(--surface); padding: 20px 16px; border: 1px solid var(--border); border-radius: 14px; min-width: 0; }
+.badge { display: inline-block; margin-top: 0; padding: 4px 12px; border: 1px solid var(--border); border-radius: 999px; }
+dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 2fr); gap: 8px 16px; }
+dt, .muted { color: var(--muted); }
+dd { margin: 0; }
+.sha-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+.sha { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; word-break: break-all; flex: 1 1 260px; min-width: 0; }
+.note { border-left: 3px solid var(--yes); padding-left: 12px; }
+ul, ol { padding-left: 22px; }
+.pr-list li { padding: 4px 0; }
+.actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.actions button { flex: 1 1 180px; font-weight: 700; }
+.yes { background: var(--yes); color: #000; border-color: var(--yes); }
+.no { background: var(--no); color: #000; border-color: var(--no); }
+.history { color: var(--muted); font-size: .9rem; }
+.history li { margin: 12px 0; }
+.request-log { padding: 0; list-style: none; }
+.request-log li { margin: 16px 0; }
+.request-log a { font-size: 1.15rem; font-weight: 700; }
+footer { margin-top: 32px; font-size: .85rem; color: var(--muted); }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}

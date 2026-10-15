@@ -1,0 +1,23 @@
+{
+  "name": "approval-web-functions",
+  "private": true,
+  "main": "lib/index.js",
+  "engines": { "node": "22" },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test:unit": "vitest run --exclude '**/*.emu.test.ts'",
+    "test:emu": "vitest run test/*.emu.test.ts --no-file-parallelism",
+    "test": "npm run build && npm run test:unit && npm run test:emu"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.0.0",
+    "firebase-functions": "^6.0.0"
+  },
+  "devDependencies": {
+    "@firebase/rules-unit-testing": "^4.0.0",
+    "@types/node": "^22.0.0",
+    "firebase": "^11.10.0",
+    "typescript": "^5.0.0",
+    "vitest": "^3.2.0"
+  }
+}

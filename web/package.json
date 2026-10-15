@@ -1,0 +1,13 @@
+{
+  "name": "approval-web",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "node scripts/render-config.mjs",
+    "check": "node scripts/render-config.mjs --check",
+    "test:render": "node --test tests/",
+    "test:unit": "cd functions && npm run build && npm run test:unit",
+    "test:emu": "firebase emulators:exec --project demo-approval-web --only firestore \"cd functions && npm run test:emu\"",
+    "test": "npm run test:render && npm run test:unit && npm run test:emu"
+  }
+}
